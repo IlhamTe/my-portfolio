@@ -8,7 +8,7 @@
 
 <p align="center"> 
   <kbd>
-    <a href="https://ilhamte.github.io/my-portfolio" target="_blank"><img src="examples/preview.gif">
+    <a href="https://ilhamte.github.io/my-portfolio" target="_blank"><img src="examples/preview.png">
   </a>
   </kbd>
 </p>
@@ -19,7 +19,6 @@
 
 ⚡️ Fully Responsive\
 ⚡️ Valid HTML5 & CSS3\
-⚡️ Typing animation using `Typed.js`\
 ⚡️ Easy to modify
 
 ## Installation & Deployment 📦
@@ -54,7 +53,6 @@ To view a live example, **[click here](https://varadbhogayata.github.io/)**
 #### Step 1
 
 - **Option 1**
-
   - 🍴 Fork this repo!
 
 - **Option 2**
