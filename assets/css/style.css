@@ -822,6 +822,13 @@ section {
   --shot-h: 360px;
 }
 
+/* Below 960px featured cards share rows with regular cards, so use one height for all */
+@media (max-width: 960px) {
+  .project-card.featured .shots {
+    --shot-h: 280px;
+  }
+}
+
 .shot {
   flex-shrink: 0;
   height: var(--shot-h);
