@@ -1,71 +1,77 @@
 # Personal Portfolio ⚡️
 
-> A clean, beautiful, responsive portfolio template for Software Developers!
+> Portfolio of Ilham Taufiqurrahman Salim — Senior Mobile Engineer (Flutter).
 
 > https://ilhamte.github.io/my-portfolio
 
 ### Website Preview
 
-<p align="center"> 
+<p align="center">
   <kbd>
-    <a href="https://ilhamte.github.io/my-portfolio" target="_blank"><img src="examples/preview.png">
-  </a>
+    <a href="https://ilhamte.github.io/my-portfolio" target="_blank"><img src="examples/preview.png" alt="Portfolio preview"></a>
   </kbd>
 </p>
 
-:star: Star me on GitHub — it helps!
-
 ## Features 📋
 
-⚡️ Fully Responsive\
-⚡️ Valid HTML5 & CSS3\
-⚡️ Easy to modify
+- Bento grid layout, fully responsive (desktop, tablet, phone)
+- Light and dark theme — follows the system setting, with a manual toggle that is remembered
+- Screenshot gallery per project with a full-size preview
+- Accessible: skip link, keyboard focus styles, screen reader labels, `prefers-reduced-motion` support
+- SEO ready: meta description, Open Graph / social preview image, JSON-LD, sitemap
+- Plain HTML, CSS and JavaScript — no framework, no build step
 
-## Installation & Deployment 📦
+## Project Structure 🗂️
 
-- Clone the repository and modify the content of <b>index.html</b> according to your requirement.
-- Add or remove images from `ilhamte.github.io/my-portfolio/assets/img/` directory as per your requirement.
-- I highly recommend to use [Github Pages](https://create-react-app.dev/docs/deployment/#github-pages) to deploy the website the EASIEST WAY.
-- To deploy your website, first you need to create github repository with name `<your-github-username>.github.io`. Please don't give any other name.
-- Push the generated code to the `master` branch of this repository.
-- <b>NOTE:</b> Make sure to set `analyticsId` from your Google Analytics account inside the Google Analytics script tag, if you want to use your own Google Analytics account.
+```
+index.html                  All page content
+assets/css/style.css        Styles and theme tokens (light + dark)
+assets/js/main.js           Theme toggle, mobile menu, scroll reveal, lightbox
+assets/images/
+  meh.png                   Profile photo (source)
+  meh-web.jpg               Profile photo used by the site (cropped, max 1000px)
+  og-image.png              Social preview (1200×630)
+  favicon.svg
+  projects/<app>/           Original screenshots (source files)
+  shots/<app>/              Resized screenshots used by the site
+robots.txt, sitemap.xml
+```
+
+## Editing Content ✏️
+
+- **Text, experience, projects:** edit `index.html`.
+- **Colors and fonts:** edit the tokens at the top of `assets/css/style.css` (`:root` for light, `:root[data-theme="dark"]` for dark).
+- **Adding a screenshot:** put the original in `assets/images/projects/<app>/`, then make a web copy (max 1000px, JPEG):
+
+  ```sh
+  sips -s format jpeg -s formatOptions 78 -Z 1000 \
+    assets/images/projects/<app>/image_1.png \
+    --out assets/images/shots/<app>/image_1.jpg
+  ```
+
+  Add an `<a class="shot">` in that project's `.shots` block in `index.html`.
+
+## Run Locally 💻
+
+Open `index.html` in a browser, or serve the folder:
+
+```sh
+python3 -m http.server 8000
+```
+
+## Deployment 📦
+
+Hosted on [GitHub Pages](https://pages.github.com/). Push to the `main` branch and GitHub Pages publishes the site.
 
 ## Sections 📚
 
-✔️ About me\
+✔️ About\
+✔️ Skills\
 ✔️ Experience\
-✔️ Projects \
-✔️ Skills \
+✔️ Projects\
 ✔️ Education\
-✔️ Contact Info\
-✔️ Resume
-
-To view a live example, **[click here](https://varadbhogayata.github.io/)**
-
-## Tools Used 🛠️
-
-- [<b>GitHub Pages</b>](https://create-react-app.dev/docs/deployment/#github-pages) - To host my static website (HTML, CSS, JS).
-- [<b>Materialize</b>](https://materializecss.com/) - A CSS framework to get Google's Material Design components.
-- [<b>Typed.js</b>](https://mattboldt.com/demos/typed-js/) - JavaScript Library
-
-## Contributing 💡
-
-#### Step 1
-
-- **Option 1**
-  - 🍴 Fork this repo!
-
-- **Option 2**
-  - 👯 Clone this repo to your local machine.
-
-#### Step 2
-
-- **Build your code** 🔨🔨🔨
-
-#### Step 3
-
-- 🔃 Create a new pull request.
+✔️ Contact & Resume
 
 ## License 📄
 
-This project is licensed under the MIT License - see the [LICENSE.md](./LICENSE) file for details.
+This project is licensed under the MIT License.
