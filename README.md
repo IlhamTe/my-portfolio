@@ -28,7 +28,8 @@ index.html                  All page content
 assets/css/style.css        Styles and theme tokens (light + dark)
 assets/js/main.js           Theme toggle, mobile menu, scroll reveal, lightbox
 assets/images/
-  meh.jpeg                  Profile photo
+  meh.png                   Profile photo (source)
+  meh-web.jpg               Profile photo used by the site (cropped, max 1000px)
   og-image.png              Social preview (1200×630)
   favicon.svg
   projects/<app>/           Original screenshots (source files)
