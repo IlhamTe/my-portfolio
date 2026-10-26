@@ -14,7 +14,9 @@
 
 ## Features 📋
 
-- Bento grid layout, fully responsive (desktop, tablet, phone)
+- Editorial layout on a 12-column grid: typography and hairline rules instead of cards, fully responsive (desktop, tablet, phone)
+- Case studies (problem, my part, result) for the main projects, plus a compact index of other shipped apps
+- Local Jakarta time in the hero and a copy-email button
 - Light and dark theme — follows the system setting, with a manual toggle that is remembered
 - Screenshot gallery per project with a full-size preview
 - Accessible: skip link, keyboard focus styles, screen reader labels, `prefers-reduced-motion` support
@@ -25,8 +27,8 @@
 
 ```
 index.html                  All page content
-assets/css/style.css        Styles and theme tokens (light + dark)
-assets/js/main.js           Theme toggle, mobile menu, scroll reveal, lightbox
+assets/css/style.css        Styles and design tokens: color, type, spacing, layout (light + dark)
+assets/js/main.js           Theme toggle, mobile menu, active nav, local time, copy email, lightbox
 assets/images/
   meh.png                   Profile photo (source)
   meh-web.jpg               Profile photo used by the site (cropped, max 1000px)
@@ -40,7 +42,7 @@ robots.txt, sitemap.xml
 ## Editing Content ✏️
 
 - **Text, experience, projects:** edit `index.html`.
-- **Colors and fonts:** edit the tokens at the top of `assets/css/style.css` (`:root` for light, `:root[data-theme="dark"]` for dark).
+- **Colors, fonts, spacing:** edit the tokens at the top of `assets/css/style.css` (`:root` for light, `:root[data-theme="dark"]` for dark). Fonts: IBM Plex Sans (headings and body), IBM Plex Mono (dates, stack and other data).
 - **Adding a screenshot:** put the original in `assets/images/projects/<app>/`, then make a web copy (max 1000px, JPEG):
 
   ```sh
@@ -49,7 +51,7 @@ robots.txt, sitemap.xml
     --out assets/images/shots/<app>/image_1.jpg
   ```
 
-  Add an `<a class="shot">` in that project's `.shots` block in `index.html`.
+  Add an `<a class="shot">` in that project's `.shots` block in `index.html` (case studies, or the `<details>` block of an app in the index).
 
 ## Run Locally 💻
 
@@ -65,11 +67,10 @@ Hosted on [GitHub Pages](https://pages.github.com/). Push to the `main` branch a
 
 ## Sections 📚
 
-✔️ About\
-✔️ Skills\
+✔️ About (with education)\
 ✔️ Experience\
-✔️ Projects\
-✔️ Education\
+✔️ Selected work\
+✔️ Expertise\
 ✔️ Contact & Resume
 
 ## License 📄
