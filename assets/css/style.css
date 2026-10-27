@@ -638,10 +638,21 @@ ol {
   }
 }
 
+/* Callout line: shared by education and the "also worked with" note */
+.edu,
+.also {
+  padding: var(--s-1) 0 var(--s-1) var(--s-4);
+  border-left: 3px solid var(--accent);
+  color: var(--ink);
+}
+
+.edu strong,
+.also strong {
+  font-weight: 600;
+}
+
 .edu {
   margin-top: var(--s-6);
-  font-size: var(--fs-small);
-  color: var(--ink-2);
 }
 
 /* ── EXPERIENCE ── */
@@ -1099,11 +1110,6 @@ ol {
   color: var(--ink-2);
   font-size: var(--fs-small);
   line-height: 1.55;
-}
-
-.also {
-  font-size: var(--fs-small);
-  color: var(--ink-2);
 }
 
 @media (min-width: 760px) {
